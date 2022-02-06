@@ -105,7 +105,7 @@ func handleConn(conn net.Conn, absPath *string, workDir *string) {
 		case "STOR":
 			storeFile(conn, args, workDir, address, dataType)
 		default:
-			ch <- status502 // not implemented including LPRT
+			ch <- status502 // Not implemented
 		}
 
 	}
